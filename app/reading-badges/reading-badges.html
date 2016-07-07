@@ -1,17 +1,17 @@
-<div class="col-md-6">
-    <div class="panel panel-primary">
-        <div class="panel-heading" translate="badges"></div>
-        <div class="panel-body">
-            <span translate="minutes-read"></span>
-            <pre>{{minutesRead | json}}</pre>
-            <div class="text-center">
-                <img ng-show="hasFiveHoursBadge" src="dist/resources/badge-5-hours.png">
-                <img ng-show="hasSevenHoursBadge" src="dist/resources/badge-7-hours.png">
-                <img ng-show="hasTenHoursBadge" src="dist/resources/badge-10-hours.png">
-                <span ng-repeat="(key, badge) in badges">
-                    <img ng-show="badge.type === 'two-consecutive-days'" src="dist/resources/badge-2-consecutive-days.png">
+<div class="row">
+    <div class="col-md-12">
+        <div class="badge-container">
+            <h2 translate="badges-earned"></h2>
+            <!--ng-if="hasFiveHoursBadge" -->
+            <img class="bs-badge" src="dist/resources/badge-5-hours.png">
+            <!--ng-if="hasSevenHoursBadge" -->
+            <img class="bs-badge" src="dist/resources/badge-7-hours.png">
+            <!--ng-if="hasFiveHoursBadge" -->
+            <img class="bs-badge" src="dist/resources/badge-10-hours.png">
+                <span repeat="(key, badge) in badges">
+                    <!--ng-if="badge.type === 'two-consecutive-days'"-->
+                    <img class="bs-badge" src="dist/resources/badge-2-consecutive-days.png">
                 </span>
-            </div>
         </div>
     </div>
 </div>

@@ -1,0 +1,17 @@
+.badge-container {
+    border-radius: 5px;
+    background-image: url('../../dist/resources/books-bg.jpg');
+    background-size:cover;
+    text-align: center;
+
+}
+.badge-container h2 {
+    background-color: #b0c50b;
+    border-radius: 5px;
+    color: white;
+    padding: 10px 0;
+}
+.bs-badge {
+    margin: 10px;
+    height: 149px;
+}

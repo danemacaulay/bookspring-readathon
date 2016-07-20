@@ -1,0 +1,16 @@
+<div class="row">
+    <table class="table">
+        <thead>
+        <tr>
+            <th translate="title"></th>
+            <th class="align-center" translate="min-read"></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="book in books">
+            <td class="col-xs-10">{{book.title}}</td>
+            <td class="amount col-xs-2">{{book.amount}}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>

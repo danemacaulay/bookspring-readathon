@@ -28,8 +28,8 @@ function ReadingMapController($rootScope, $scope, bsrFirebase, $window, readingM
             geometry: town.geometry,
             properties: {
                 town: town.properties.town,
-                timeRead:(zipCode !== undefined) ? zipCode.minutesRead : null,
-                color:(zipCode !== undefined) ? colorScale(zipCode.minutesRead) : null,
+                timeRead:(zipCode !== undefined) ? zipCode.minutesRead : 0,
+                color:(zipCode !== undefined) ? colorScale(zipCode.minutesRead) : '#6ec9e0'
             }
         };
     }
@@ -40,13 +40,13 @@ function ReadingMapController($rootScope, $scope, bsrFirebase, $window, readingM
             .attr('class', 'd3-tip')
             .offset([0,1])
             .html(function(d) {
-                return "<div><strong>Zipcode:</strong> <span style='color:red'>" + d.id + "</span></div>" +
-                    "<div><strong>Town:</strong> <span style='color:red'>" + d.properties.town + "</span></div>" +
-                    "<div><strong>Time Read:</strong> <span style='color:red'>" + d.properties.timeRead + "</span></div>";
+                return "<div><strong>Zipcode:</strong> <span style='color:white'>" + d.id + "</span></div>" +
+                    "<div><strong>Town:</strong> <span style='color:white'>" + d.properties.town + "</span></div>" +
+                    "<div><strong>Time Read:</strong> <span style='color:white'>" + d.properties.timeRead + "</span></div>";
             });
 
         colorScale = d3.scale.linear()
-            .range(['beige', 'red'])
+            .range(['#003d4d', '#6ec9e0'])
             .domain(d3.extent(data, function(d){
                 return d.minutesRead;
             }));

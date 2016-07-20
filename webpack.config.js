@@ -16,6 +16,8 @@ module.exports = {
             { test: /\.html/, loader: 'raw' },
             { test: /\.js/, loader: 'ng-annotate' },
             { test: /\.css$/, loader: 'style!css' },
+            { test: /\.jpg$/, loader: "url-loader?limit=100000" },
+            { test: /\.png$/, loader: "url-loader?limit=100000" },
             { test: /\.json$/, loader: 'json' }
         ]
     },

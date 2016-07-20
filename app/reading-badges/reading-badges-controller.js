@@ -12,6 +12,7 @@ function ReadingBadgesController($scope, $rootScope, bsrFirebase) {
     function determineWeeklyBadges(minutesRead) {
         var hours = Math.round(minutesRead / 60);
         $scope.$evalAsync(function(){
+            console.log(moment.duration(minutesRead,"minutes").humanize());
             $scope.minutesRead = minutesRead;
             if (hours >= 5) {
                 $scope.hasFiveHoursBadge = true;

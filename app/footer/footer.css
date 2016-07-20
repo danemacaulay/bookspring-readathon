@@ -1,0 +1,38 @@
+footer .logo-small {
+    background-image: url('../../dist/resources/bookspring-logo-sm.jpg');
+background-repeat: no-repeat;
+    height: 56px;
+
+}
+
+
+@media only screen
+and (max-device-width: 768px)
+{
+    footer .logo-small {
+        background-position: center;
+        width: 100%;
+    }
+    footer .copyright {
+        text-align: center;
+    }
+}
+
+@media only screen
+and (min-device-width: 768px)
+{
+    footer .logo-small {
+        float: left;
+        width: 215px;
+    }
+    footer .copyright {
+        float: right;
+    }
+
+
+    footer {
+        margin: 3%;
+        padding-top: 3%;
+        border-top: 1px solid #6EC9E0;
+    }
+}

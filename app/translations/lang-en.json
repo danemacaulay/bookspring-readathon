@@ -1,6 +1,8 @@
 {
     "app-name": "Bookspring",
     "language": "Language",
+    "english": "English",
+    "spanish": "Spanish",
     "login": "Login",
     "login-or-signup": "Login or Signup",
     "facebook": "Facebook",
@@ -25,5 +27,14 @@
     "one-day": "One day",
     "one-week": "One week",
     "one-month": "One month",
-    "submit-time": "Submit Time"
+    "submit-time": "Submit Time",
+    "badges-earned": "Badges Earned",
+  "reading-time": "Enter your reading time",
+  "enter-book-title": "Enter Book Title",
+  "title": "Title",
+  "min-read": "Min Read",
+  "total": "Total",
+  "you":"You",
+  "everyone": "Everyone",
+  "avg": "Average"
 }

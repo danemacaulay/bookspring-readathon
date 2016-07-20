@@ -1,0 +1,33 @@
+.uib-dropdown-menu {
+    background-color: #fff;
+}
+
+@media only screen
+and (max-device-width: 768px)
+{
+    .navbar {
+        height: 170px;
+    }
+    .navbar-nav.right {
+        text-align: center;
+    }
+    .navbar-nav:after {
+        content: ' ';
+        overflow: hidden;
+    }
+    .navbar-nav>li {
+        display: inline-block;
+    }
+}
+
+@media only screen
+and (min-device-width: 768px)
+{
+    .navbar {
+        height: 120px;
+    }
+    .navbar-nav.right {
+        float:right;
+    }
+}
+

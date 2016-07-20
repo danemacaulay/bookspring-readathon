@@ -1,29 +1,28 @@
 'use strict';
 
 /* @ngInject */
-function ReadingListController($scope) {
-    $scope.books = [
-        {
-            'title': 'book 1',
-            'amount': 35
-        },
-        {
-            'title': 'book 2',
-            'amount': 45
-        },
-        {
-            'title': 'book 3',
-            'amount': 25
-        },
-        {
-            'title': 'book 4',
-            'amount': 15
-        },
-        {
-            'title': 'book 5',
-            'amount': 75
-        }
-    ]
+function ReadingListController($rootScope, $scope, bsrFirebase) {
+
+    function fetchAndSubscibeToUsersReadingData(evt, startDate, user) {
+        bsrFirebase.child('entries/users')
+            .child(user.uid)
+            .orderByChild('submitted')
+            .startAt(startDate)
+            .on('value', function (snapshot) {
+                $scope.$evalAsync(function () {
+                    $scope.books = snapshot.val();
+                });
+            });
+    }
+
+    $scope.books = {};
+
+    $scope.hasEntries = function () {
+        return Object.keys($scope.books).length;
+    };
+
+    $rootScope.$on('numberOfDays', fetchAndSubscibeToUsersReadingData);
+
 }
 
 

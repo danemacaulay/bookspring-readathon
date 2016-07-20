@@ -71,6 +71,9 @@ function ReadingEntryController($scope, $rootScope, $filter, $window, bsrFirebas
         $scope.alerts.push({ type: 'success', msg: msg});
         bsrFirebase.child('entries/all').push($scope.entry);
         bsrFirebase.child('entries/users').child(user.uid).push($scope.entry);
+        $scope.$evalAsync(function () {
+            $scope.entry = {minutesRead: 15};
+        });
     }
 
     function init(evt, authedUser) {

@@ -20,6 +20,7 @@ function ReadingMapController($rootScope, $scope, bsrFirebase, $window, readingM
 
     var mapContainer = d3.select("#map"), projection, path, colorScale;
     var texas = topojson.feature(txJson, txJson.objects.texas);
+    var user;
 
     function createReadingMapTopoEntry(town, zipCode) {
         return {
@@ -59,7 +60,7 @@ function ReadingMapController($rootScope, $scope, bsrFirebase, $window, readingM
             .center([0, 30.25000])
             .rotate([97.7500, 0])
             .parallels([50, 60])
-            .scale(width*30)
+            .scale(width * 30)
             .translate([width / 2, height / 2]);
 
         path = d3.geo.path()
@@ -88,7 +89,7 @@ function ReadingMapController($rootScope, $scope, bsrFirebase, $window, readingM
         // update projection
         projection
             .translate([width / 2, height / 2])
-            .scale(width*30);
+            .scale(width * 30);
 
         // resize the map container
         mapContainer
@@ -110,14 +111,15 @@ function ReadingMapController($rootScope, $scope, bsrFirebase, $window, readingM
         mapContainer.selectAll('*').remove(); // @TODO, do not redraw entire map on data change
         var now = moment().utc();
         var startDate = now.subtract(numberOfDays, 'days').toDate().toJSON();
-
+        $rootScope.$broadcast('numberOfDays', startDate, user);
         bsrFirebase.child('entries/all')
             .orderByChild('submitted')
             .startAt(startDate)
             .once('value', handleMinutesMapSnapshot);
     }
 
-    function init() {
+    function init(event, authedUser) {
+        user = authedUser;
         getMapData(30);
         d3.select($window).on('resize', _.debounce(resize, 300));
     }

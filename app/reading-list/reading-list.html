@@ -1,16 +1,20 @@
 <div class="row">
-    <table class="table">
+    <table class="table" ng-show="hasEntries()">
         <thead>
-        <tr>
-            <th translate="title"></th>
-            <th class="align-center" translate="min-read"></th>
-        </tr>
+            <tr>
+                <th translate="title"></th>
+                <th class="align-center" translate="min-read"></th>
+            </tr>
         </thead>
         <tbody>
-        <tr ng-repeat="book in books">
-            <td class="col-xs-10">{{book.title}}</td>
-            <td class="amount col-xs-2">{{book.amount}}</td>
-        </tr>
+            <tr ng-repeat="book in books">
+                <td class="col-xs-10" ng-if="book.title">{{book.title}}</td>
+                <td class="col-xs-10" ng-if="!book.title" translate="untitled-book"></td>
+                <td class="amount col-xs-2">{{book.minutesRead}}</td>
+            </tr>
         </tbody>
     </table>
+    <div ng-hide="hasEntries()" uib-alert>
+        <span translate="no-entries-added"></span>
+    </div>
 </div>

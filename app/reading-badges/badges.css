@@ -1,6 +1,6 @@
 .badge-container {
     border-radius: 5px;
-    background-image: url('../../dist/resources/books-bg.jpg');
+    background-image: url('books-bg.jpg');
     background-size:cover;
     text-align: center;
 

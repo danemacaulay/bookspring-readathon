@@ -30,4 +30,21 @@ and (min-device-width: 768px)
         float:right;
     }
 }
+.navbar-header {
+    position: relative;
+}
+.navbar-header img {
+    max-width: 300px;
+}
+.header-txt {
+    position: absolute;
+    right:35px;
+    top:55px;
+    background-color: #fff;
+    color: #034150;
+    padding: 2px;
+    font-size: 16px;
+    font-weight:bold;
+    text-transform: uppercase;
+}
 

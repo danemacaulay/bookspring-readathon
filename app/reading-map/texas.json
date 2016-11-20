@@ -157,6 +157,22 @@
           ]
         },
         {
+        "properties": {
+            "town": "Manchaca"
+            },
+          "type": "Polygon",
+          "id": "78652",
+          "arcs": [
+            [
+              -4186,
+              4200,
+              4201,
+              4202,
+              4203
+            ]
+          ]
+        },
+        {
           "properties": {
             "town": "Liberty Hill"
             },

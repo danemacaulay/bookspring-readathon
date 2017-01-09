@@ -18,7 +18,7 @@
   "minutes-read": "Minutes read",
   "minutes-set": "minutes",
   "login-failed": "Login failed",
-  "registration-failed": "Registration failed",
+  "registration-failed": "Looks like you are already registered.  Please go to Login and try again.",
   "youve-read-this-much": "You've read {{hours}}",
   "youve-logged-this-much": "You've logged {{minutes}} minutes",
   "logout": "Logout",
@@ -38,5 +38,7 @@
   "everyone": "Everyone",
   "untitled-book": "Untitled Book",
   "no-entries-added": "No reading entries logged. Enter your reading time to see your reading history.",
-  "avg": "Average"
+  "avg": "Average",
+  "welcome-msg":"Welcome.  Register or log in here to participate.",
+  "more-info": "Click for more information."
 }

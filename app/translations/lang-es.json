@@ -28,7 +28,7 @@
     "reading-map": "Reading Mapa",
     "reading-time": "Ingrese su tiempo de lectura",
     "register": "Registro",
-    "registration-failed": "Error de inicio de sesion",
+    "registration-failed": "Parece que ya está registrado. Por favor, vaya a Iniciar sesión e inténtelo de nuevo.",
     "spanish": "Español",
     "submit-time": "Presentar",
     "title": "Título",
@@ -38,5 +38,7 @@
     "youve-read-this-much": "Usted ha leído {{ hours }} horas",
     "youve-read-this-much": "Usted ha leído {{hours}}",
     "zipcode": "Código postal",
-    "zipcode-invalid": "Código postal no válido"
+    "zipcode-invalid": "Código postal no válido",
+    "welcome-msg":"Bienvenido. Regístrese o ingrese aquí para participar",
+    "more-info": "Haga clic para obtener más información."
 }
